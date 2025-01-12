@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>woodsclinic-website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="header">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./img/logo.jpg" alt="Logo">
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fa-brands fa-youtube" style="color: #f50000;"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-instagram" style="color: #e1008b;"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #00db78;"></i></a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#home">Profile</a></li>
+        <li><a href="#home">Reviews</a></li>
+        <li class="dropdown">
+          <a href="#services">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#service1">Joint and Muscle Pain</a></li>
+            <li><a href="#service2">Diabetes</a></li>
+            <li><a href="#service3">Blood Pressure</a></li>
+            <li><a href="#service3">Respiratory Problems</a></li>
+            <li><a href="#service3">More</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Appointment Button -->
+      <div class="appointment">
+        <button class="appointment-btn">Book Appointment</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="section-1">
+        <div class="about">
+            <h1>Woods Clinic</h1>
+            <p>Woods Clinic provides treatment to patients suffering from all kinds of physical and psychological problems. Treatment will be provided based upon the ailments through <b>physiotherapy</b>, <b>acupuncture-acupressure</b>, <b>yoga therapy</b>, or <b>flower remedy</b> best applicable for the problem with a holistic approach.</p>
+        </div>
+        <img src="./img/logo.jpg" class="logo-big-image" alt="logo-img">
+    </div>
+    <div class="section-2">
+        <div>
+            <h1 class="vid-cap"><b>Watch Our Videos On YouTube</b></h1>
+            <iframe  class="yt-video" height="400" width="400" 
+            src="https://www.youtube.com/embed/WiTkjGS3D3Y?controls=1"><!--  Od8leKhbozQ -->
+            </iframe> 
+        </div>
+        <div class="timing">
+            <h1><b>Timings</b></h1>
+            <p>9AM - 9:30PM</p>
+            <p>MONDAY-SATURDAY</p>
+            <p id="mob"><i class="fa-solid fa-phone fa-lg" style="color: #0978ce;"></i> : +91 93616 92951</p>
+            <span><a href=""><i class="fa-brands fa-youtube" style="color: #f50000;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="color: #e1008b;"></i></a></span>
+            <button class="book-btn1">ONLINE/OFFINE Consultation</button>
+        </div>
+    </div>
+    <div class="section-3">
+        <h1 ><b>Services</b></h1>
+        <div class="services">
+            <div class="service"><a href="">Joint and Muscle Pain</a></div>
+            <div class="service"><a href="">Diabetes</a></div>
+            <div class="service"><a href="">Blood Pressure</a></div>
+            <div class="service"><a href="">Respiratory Problems</a></div>
+            <div class="service"><a href="">Psychological Problems</a></div>
+            <div class="service"><a href="">Insomnia</a></div>
+            <div class="service"><a href="">Gastritis and Gut Proble</a></div>
+            <div class="service"><a href="">Others</a></div>
+            
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy;2025 Woods Clinic. All Rigths Reserved</p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
