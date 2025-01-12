@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Reset Styles */
+/* *{
+  outline:1px solid red;
+} */
 *{
   margin: 0;
   padding: 0;
@@ -17,7 +20,7 @@ b{
 /* Header Styling */
 .header {
   height: 10vh;
-  width: 100%;
+  
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -154,28 +157,25 @@ main{
 
 }
 .section-1{
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2,1fr);
-  padding: 3rem;
-  /* height: 75vh; */
-  
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 .about{
-  margin :200px 0 0 100px;
+  width: 50%;
 }
 .about h1{
-  margin-bottom: 1rem;
-  font-weight: 800;
-  color: #008000;
+  color:green;
+ 
 }
+.about p{
+  padding: 10px;
+  
+}
+
 .logo-big-image{
-  height: 400px;
-  width: 400px;
-  margin-left: 200px;
-  margin-top: 50px;
-  z-index: 0;
+  width: 40%;
 }
 .section-2{
   display: grid;
@@ -187,8 +187,11 @@ main{
   width: 100%;
 }
 .yt-video{
-
-  margin:30px 0px 0px  150px;
+  display: block; 
+  margin: 0 auto; 
+  width: 100%;
+  max-width: 360px; 
+  height: 440px; 
 }
 .vid-cap{
   text-align: center;
@@ -257,7 +260,7 @@ main{
 
 .section-3 h1{
   color: green;
-  margin-left: 4rem;
+  
   margin-top: 2rem;
 }
 .section-3 .service:hover{
@@ -274,17 +277,30 @@ footer{
   height: 10vh;
 }
 /* Responsive Styles */
-@media (max-width: 1024px){
-  .logo-big-image{
-    margin-left: 10px;
+ @media (max-width: 1298px){
+  .section-1 {
+    flex-direction: row;
+    justify-content: space-between;
   }
+
   .about {
-    margin: 150px 0 0 10px;
+      width: 50%;
+  }
+
+  .logo-big-image {
+      width: 45%;
+  }
+.section-2 {
+  grid-template-columns: 1fr; 
+  padding: 2rem;
 }
-.yt-video{
-
-  margin-left:10px;
-
+.yt-video {
+  margin: 20px auto; 
+  width: 80%; 
+}
+.book-btn1 {
+  width: 300px;
+  font-size: 1rem; 
 }
 }
 @media (max-width: 786px) {
@@ -295,7 +311,7 @@ footer{
   .navbar {
     display: none;
     flex-direction: column;
-    background-color: #90fa8981;
+    background-color: rgb(5, 25, 9);
     position: absolute;
     top: 100%;
     left: 0;
@@ -304,7 +320,12 @@ footer{
     z-index: 1000;
     
   }
+  .navbar a{
+    border: 3px solid rgb(23, 99, 38);
+    display: block;
+    color: aliceblue;
 
+  }
   .navbar.active {
     display: flex;
   }
@@ -322,46 +343,36 @@ footer{
     margin-top: 10px;
     margin-right: 40px;
   }
-  .section-1{
-    grid-template-columns: 1fr;
-  }
-  .about{
-    margin-top :100px;
-    margin-left:10px ;
-  }
-  .about h1{
-    margin-bottom: 1rem;
-    font-weight: 800;
-    color: #008000;
-  }
-  .logo-big-image {
-    height: 400px;
-    width: 400px;
-    margin-left: 150px;
-    margin-top: 50px;
-    z-index: 0;
-  }
-  .section-2{
-    grid-template-columns: 1fr;
-    place-content: center;
-  }
-  .yt-video{
-
-    margin-left:150px;
-  
-  }
-  .vid-cap{
+  .section-1 {
+    flex-direction: column;
     text-align: center;
-    color:green;
   }
-  .timing p{
-    font-size: 14px;
+
+  .about {
+      width: 100%;
+      margin-bottom: 20px;
   }
-  .book-btn1{
+
+  .logo-big-image {
+      width: 80%;
+  }
+  .section-2 {
+    padding: 1.5rem; 
+  }
+  .yt-video {
+    width: 90%;
+    height: auto;
+  }
+  .vid-cap {
+    font-size: 1.2rem; 
+  }
+  .timing h1 {
+    font-size: 1.5rem; 
+  }
+  .book-btn1 {
     width: 250px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
- 
 
 }
 @media (max-width: 480px) {
@@ -372,7 +383,7 @@ footer{
   .navbar {
     display: none;
     flex-direction: column;
-    background-color: #90fa8981;
+    background-color: #31ef0b81;
     position: absolute;
     top: 100%;
     left: 0;
@@ -381,7 +392,12 @@ footer{
     z-index: 1000;
     
   }
+  .navbar a{
+    border: 3px solid rgb(23, 99, 38);
+    display: block;
+    color: aliceblue;
 
+  }
   .navbar.active {
     display: flex;
   }
@@ -399,46 +415,51 @@ footer{
     margin-top: 10px;
     margin-right: 40px;
   }
-  .section-1{
-    grid-template-columns: 1fr;
+  .section-1 {
+    flex-direction: column;
+    text-align: center;
   }
-  .about{
-    margin-left :10px;
-    margin-top: 100px;
-   
-    
-  }
-  .about h1{
-    margin-bottom: 1rem;
-    font-weight: 800;
-    color: #008000;
-  }
-  .about p{
-    font-size: 14px;
-    text-justify: distribute-all-lines;
-  }
-  .logo-big-image{
-    margin-left: 100px;
-    height: 200px;
-    width: 200px;
-  }
-  .section-2{
-    grid-template-columns: 1fr;
-  }
-  .yt-video{
 
-    margin:30px 0px 0px  0px;
+  .about {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .logo-big-image {
+      width: 80%;
+  }
+  .section-2 {
+    padding: 1rem;
+  }
+  .yt-video {
+    width: 100%; 
+    height: auto; 
+    margin: 10px 0; 
   
   }
-  .vid-cap{
+  .vid-cap {
+    font-size: 1rem; 
+  }
+  .timing {
+    align-items: center; 
     text-align: center;
-    color:green;
   }
-  .timing p{
-    font-size: 14px;
+  .timing h1 {
+    font-size: 1.2rem;
   }
-  .book-btn1{
-    width: 250px;
-    font-size: 1rem;
+  .timing p {
+    font-size: 0.9rem;
   }
-}
+  .timing span a i {
+    font-size: 1.5rem; 
+  }
+  .book-btn1 {
+    width: 200px; 
+    font-size: 0.8rem;
+  }
+ 
+} 
+
+
+
+
